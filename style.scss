@@ -1,0 +1,148 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background: #eee;
+   font-family: 'Barlow';
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   font-size: 13px;
+   color: hsl(0, 0%, 87%);
+   position: relative;
+}
+
+section {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   gap: 20px;
+   //height: 50%;
+   width: 95%;
+   //background: coral;
+}
+
+section > * {
+   padding: 20px;
+   border-radius: 5px;
+}
+
+p {
+   opacity: 0.7;
+}
+.testimonial-1 {
+   grid-column-start: span 3;
+   background: hsl(263, 55%, 52%);
+   position: relative;
+}
+
+.testimonial-1 img{
+   border: 3px solid hsl(263, 57%, 62%)
+}
+
+.testimonial-1::before {
+   content: open-quote;
+   position: absolute;
+   top: -32%;
+   right: 15%;
+   font-size: 30em;
+   font-family: sans-serif;
+   opacity: 0.8;
+}
+
+.testimonial-2 {
+   background: hsl(217, 19%, 35%)
+}
+
+.testimonial-3 {
+   grid-row-start: span 2;
+   background:  hsl(0, 0%, 100%);
+   color: hsl(219, 29%, 14%);
+}
+
+.testimonial-4 {
+   background: hsl(0, 0%, 100%);
+   color: hsl(219, 29%, 14%);
+}
+
+.testimonial-5 {
+   grid-column-start: span 3;
+   background: hsl(219, 29%, 14%);
+}
+
+.testimonial-5  img{
+   border: 3px solid hsl(263, 55%, 58%)
+}
+
+.profile {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   align-items: center;
+   margin-bottom: 20px;
+}
+
+.profile img {
+   margin-right: 10px; 
+   border-radius: 100%;
+   height: 30px;
+}
+
+.profile h6 {
+   font-weight: 500;
+}
+
+.quote h4 {
+   font-weight: 600;
+   letter-spacing: 0.8px;
+   line-height: 1.4;
+}
+
+.quote p {
+   margin: 10px 0;
+}
+
+footer {
+   position: absolute;
+   bottom: 5%;
+}
+
+.attribution {
+   color: hsl(219, 29%, 14%);
+}
+
+@media (max-width: 500px) {
+
+   section {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      height: 80%;
+      width: 80%;
+      margin-bottom: 50px;
+   }
+
+   .testimonial-1::before {
+      content: open-quote;
+      position: absolute;
+      top: -10%;
+      right: 15%;
+      font-size: 20em;
+      font-family: sans-serif;
+      opacity: 0.8;
+   }
+
+   footer {
+      display: none;
+   }
+}
+
+@media (max-width: 300px) {
+   .testimonial-1::before {
+      display: none;
+   }
+}
