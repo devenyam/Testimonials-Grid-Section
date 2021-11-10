@@ -116,14 +116,21 @@ footer {
 
 @media (max-width: 500px) {
 
+   body {
+      min-height: 100vh;
+   }
+
    section {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      align-items: center;
-      height: 80%;
-      width: 80%;
-      margin-bottom: 50px;
+      //align-items: center;
+      width: 90%;
+      padding-bottom: 50px;
+      position: absolute;
+      top: 0;
+      margin: 20px 0;
+      gap: 10px;
    }
 
    .testimonial-1::before {
@@ -133,7 +140,11 @@ footer {
       right: 15%;
       font-size: 20em;
       font-family: sans-serif;
-      opacity: 0.8;
+      opacity: 0.5;
+   }
+
+   .testimonial-5 {
+      margin-bottom: 20px;
    }
 
    footer {
